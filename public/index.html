@@ -1,421 +1,494 @@
 <!doctype html>
-<html>
-<head>
-
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
-
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
     <title>Phillip Chaffee</title>
+    <meta name="description" content="Self taught software engineer with 6 years of experience. Expertise in Rails, Typescript, Postgres, React, REST APIs, and authentication. Passionate about clean code, types, health/health tech/nutrition/exercise, and community." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
+    <style>:root {
+  /* Colors */
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
 
-    <style>
-            body {
-  background: #EEEEEE;
-  font: 13px "Times New Roman", Times, sans-serif;
-  line-height: 1.4;
-  margin: 40px 0;
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
 }
-em {
-  color: #999;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-p {
-  line-height: 1.4;
+
+html {
+  font-size: 14px;
 }
+
+body {
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
+}
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
 ul {
-  margin-bottom: 0;
+  padding-left: 1em;
 }
-li {
-  margin-bottom: 2px;
+
+li + li {
+  margin-top: 0.2em;
 }
+
+li::marker {
+  color: var(--mutedColor);
+}
+
 a {
+  color: var(--linkColor);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
-#resume {
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 80px 100px;
-  background: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 4px #aaa;
-  -webkit-box-shadow: 2px 2px 4px #aaa;
+a:focus,
+a:hover {
+  color: var(--accentColor);
 }
 
-.coursesList {
-  width: 28%;
-  vertical-align: top;
-  display: inline-block;
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
 }
 
-.largeFont {
-  font-size: 20px;
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
 
-.smallFont {
-  font-size: 13px;
+h1 {
+  font-size: var(--scale5);
 }
 
-.sectionBlock {
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  row-gap: 0;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.spaced-list {
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.sectionName {
-  width: 18%;
-  vertical-align: top;
-  display: inline-block;
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
 }
 
-.sectionContent {
-  width: 80%;
-  vertical-align: top;
-  display: inline-block;
+.spaced-list > :nth-child(2) {
+  order: 2;
 }
 
-.sectionContent ul {
-  padding-left: 20px;
-  margin-top: 6px;
-  list-style-type: circle;
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
 }
 
-.sectionContent .title {
-  font-weight: bold;
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
 }
 
-.sectionContent .date {
-  float: right;
-}
-
-.sectionContent .separator {
-  height: 14px;
-}
-
-.sectionLine {
-  border-style: dashed;
-  border-width: 1px;
-  border-color: #CFCFCF;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.divider {
-  font-weight: bold;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.summary {
-  margin-top: 6px;
-}
-
-.skillBlock {
-  margin-bottom: 4px;
-}
-
-.jobBlock {
-  page-break-inside: avoid;
-}
-
-/* Media Queries */
-@media only screen and (max-width: 40em) {
-  body {
-    margin: 0;
-    font-size: 14px;
-  }
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0.5em 1em;
-    border: none;
-  }
-  .sectionBlock {
-    flex-direction: column;
-  }
-  .sectionContent {
-    width: 100%;
-  }
-  .sectionContent .date {
-    padding-right: 2em;
-  }
-  .sectionName {
-    width: auto;
-  }
-  .largeFont {
-    font-size: 20px;
-  }
-  .smallFont {
-    font-size: 14px;
-  }
-}
-
-@media print {
-  body {
-    background: #FFFFFF;
-  }
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0px 0px;
-    border: 0px;
-    background: #fff;
-    box-shadow: none;
-    -webkit-box-shadow: none;
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
   }
 
-  a {
-    color: black;
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
   }
 }
-
-    </style>
-
-</head>
-<body>
-
-<div id='resume'>
-        <div id='nameBlock' class='largeFont'>
-    <span class='name'>
-      Phillip Chaffee,
-    </span>
-                <span class='label'>Senior Software Engineer</span>
-        </div>
-        <div id='basicsBlock' class='smallFont'>
-            <div class='contactBlock'>
-                    <span class='email'>phillipdensmorechaffee@gmail.com</span>
-                    <span class='divider'>|</span>
-                    <span class='phone'>443-553-5272</span>
-                    <span class='divider'>|</span>
-                    <span class='address'>
-          San Francisco, US
-        </span>
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+          <h1>Phillip Chaffee</h1>
+          <h2>Senior Software Engineer</h2>
+      </header>
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="grid-list">
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:phillipdensmorechaffee@gmail.com">phillipdensmorechaffee@gmail.com</a>
             </div>
-                <div id='profilesBlock'>
-                            <span class='url'>
-              <a href='https://www.linkedin.com/in/phillipdensmorechaffee/'>LinkedIn</a>
-            </span>
-                            <span class='divider'>|</span>
-                            <span class='url'>
-              <a href='https://github.com/phillipchaffee'>Github</a>
-            </span>
-                            
+            <div>
+              <h4>Phone</h4>
+              443-553-5272
+            </div>
+            <div>
+              <h4>Website</h4>
+              <a href=""></a>
+            </div>
+        </div>
+      </section>
+        <section id="about">
+          <h3>About</h3>
+          <article>
+            <p>Self taught software engineer with 6 years of experience. Expertise in Rails, Typescript, Postgres, React, REST APIs, and authentication. Passionate about clean code, types, health/health tech/nutrition/exercise, and community.</p>
+          </article>
+        </section>
+        <section id="profiles">
+          <h3>Profiles</h3>
+          <div class="grid-list">
+              <div>
+                  <h4>LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/phillipdensmorechaffee/">phillipdensmorechaffee</a>
+              </div>
+              <div>
+                  <h4>Github</h4>
+                    <a href="https://github.com/phillipchaffee">phillipchaffee</a>
+              </div>
+          </div>
+        </section>
+
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>VoiceOps</h4>
+                  <span>
+                    <time datetime="2021-02-28">Feb 2021</time> –
+                    Present
+                  </span>
                 </div>
+                <div class="spaced-list">
+                    <strong>Senior Software Engineer</strong>
+                    <a href="https://voiceops.com">voiceops.com</a>
+                </div>
+              </header>
+                <p>Lead daily engineering stand-up, sprint planning, and sprint retrospective. Collaborated with the other senior engineers on new software architecture including a call audio integration API, a microservice that aligns text and audio, and an overhaul of our transcription UI.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Implemented SAML SSO allowing our customers to authenticate to the VoiceOps platform using their own identity provider. Used by 20% of our clients.</li>
+                    <li>Collaborated on a project to redesign our transcription process that reduced transcription cost by 90%</li>
+                    <li> One of two engineers always on call to fix production issues in real time in every part of the stack.</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>VoiceOps</h4>
+                  <span>
+                    <time datetime="2020-02-28">Feb 2020</time> –
+                    <time datetime="2021-01-31">Jan 2021</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Engineer</strong>
+                    <a href="https://voiceops.com">voiceops.com</a>
+                </div>
+              </header>
+                <p>Collaborated with the other engineers on:</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>The VoiceOps frontend. A platform for call center managers and coaches to view the transcripts of their employees calls, review labels about what happened on each call, and do live coaching via comments in the app.</li>
+                    <li>A mechanical turk style transcription marketplace that supported 10k+ daily users logging in and performing manual transcription, transcript grading, and transcript tagging tasks</li>
+                    <li> A data pipeline that transformed raw audio data into transcribed and tagged text</li>
+                    <li> Multiple customer integrations that imported data from our customers into our data pipeline.</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Chatham Financial</h4>
+                  <span>
+                    <time datetime="2017-09-30">Sep 2017</time> –
+                    <time datetime="2020-01-31">Jan 2020</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Developer</strong>
+                    <a href="https://www.chathamfinancial.com">www.chathamfinancial.com</a>
+                </div>
+              </header>
+                <p>The Platform Engineering team maintains and revamps the underlying architecture used by other development teams across Chatham. We work on things like our in-house REST client, our document storage system, general API, etc. C#. - Implemented supplier initiated SAML SSO for flagship website. - Moved system cookie authentication and management from a C# legacy library to a .NET Core microservice that can be used by static web applications. - Helped change our document storage solution from a file system storage system that needed to sync across all offices to a blob storage based system that only syncs between two offices for failover reasons.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Chatham Financial</h4>
+                  <span>
+                    <time datetime="2016-05-31">May 2016</time> –
+                    <time datetime="2017-08-31">Aug 2017</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Test Engineer</strong>
+                    <a href="https://www.chathamfinancial.com">www.chathamfinancial.com</a>
+                </div>
+              </header>
+                <p>Helped guide a small team of developers in creating the correct software for complex hedge accounting situations. Learned the hedge accounting system and constantly asked pointed questions to help guide the team’s thinking. Wrote automated acceptance/regression tests in C# and Ruby to confirm the software’s functionality daily.</p>
+            </article>
         </div>
-        <div class='sectionLine'></div>
-
-        <div id='summaryBlock' class="sectionBlock">
-            <div class='sectionName'>
-                <span>SUMMARY</span>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Tall Oaks Classical School</h4>
+                  <span>
+                    <time datetime="2007-12-31">Dec 2007</time> –
+                    <time datetime="2012-12-31">Dec 2012</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>High School</strong>
+                </div>
+              </header>
+                <p>High School</p>
+            </article>
+        </div>
+      </section>
+      <section id="projects">
+        <h3>Projects</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>The Elements of Computing Systems - Building a Modern Computer from First Principles</h4>
+                  <span>
+                    <time datetime="2015-12-31">Dec 2015</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                  </span>
+                    <a href="https://github.com/PhillipChaffee/n2t">github.com/PhillipChaffee/n2t</a>
+                </div>
+              </header>
+            </article>
+        </div>
+      </section>
+      <section id="awards">
+        <h3>Awards</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Gold Medal of Achievement (Eagle Scout)</h4>
+                    <time datetime="2013-03-31">Mar 2013</time>
+                </div>
+                <div class="spaced-list">
+                    <div>
+                      Awarded by <strong>Royal Rangers</strong>
+                    </div>
+                </div>
+              </header>
+                <p>Earned the Gold Medal of Achievement in Royal Rangers, a program that mirrors boy scouts in a church setting. The GMA requires all the same merits as the Eagle Scout Award.</p>
+            </article>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Ruby</h4>
             </div>
-            <div class='sectionContent'>
-                <span>Self taught software engineer with 6 years of experience. Expertise in Rails, Typescript, Postgres, React, REST APIs, and authentication. Passionate about clean code, types, health/health tech/nutrition/exercise, and community.</span>
+            <div>
+                <h4>Python (Programming Language)</h4>
+            </div>
+            <div>
+                <h4>React</h4>
+            </div>
+            <div>
+                <h4>C#</h4>
+            </div>
+            <div>
+                <h4>Chatham Financial</h4>
+            </div>
+            <div>
+                <h4>SQL</h4>
+            </div>
+            <div>
+                <h4>TypeORM</h4>
+            </div>
+            <div>
+                <h4>Public Speaking</h4>
+            </div>
+            <div>
+                <h4>PostgreSQL</h4>
+            </div>
+            <div>
+                <h4>Problem Solving</h4>
+            </div>
+            <div>
+                <h4>Linux</h4>
+            </div>
+            <div>
+                <h4>JavaScript</h4>
+            </div>
+            <div>
+                <h4>HTML5</h4>
+            </div>
+            <div>
+                <h4>Express.js</h4>
+            </div>
+            <div>
+                <h4>Flask</h4>
+            </div>
+            <div>
+                <h4>Node.js</h4>
+            </div>
+            <div>
+                <h4>SpecFlow</h4>
+            </div>
+            <div>
+                <h4>Angular2</h4>
+            </div>
+            <div>
+                <h4>CSS3</h4>
+            </div>
+            <div>
+                <h4>.NET Core</h4>
+            </div>
+            <div>
+                <h4>Ruby on Rails</h4>
+            </div>
+            <div>
+                <h4>Git</h4>
+            </div>
+            <div>
+                <h4>TypeScript</h4>
+            </div>
+            <div>
+                <h4>R</h4>
             </div>
         </div>
-        <div class='sectionLine'></div>
-
-        <div id='workBlock' class="sectionBlock">
-            <div class='sectionName'>
-                <span>EXPERIENCE</span>
-            </div>
-            <div class='sectionContent'>
-                    <div class="jobBlock">
-                        <div class='blockHeader'>
-	        <span class='title'>
-	          VoiceOps - Senior Software Engineer
-	        </span>
-                                <span class='date'>2021-02-28 &mdash; Present</span>
-                        </div>
-                        <div><a href='https://voiceops.com'>https://voiceops.com</a></div>
-                            <ul class='highlights'>
-                                    <li>Lead daily engineering stand-up, sprint planning, and sprint retrospective. Collaborated with the other senior engineers on new software architecture including a call audio integration API, a microservice that aligns text and audio, and an overhaul of our transcription UI.</li>
-                                    <li>Implemented SAML SSO allowing our customers to authenticate to the VoiceOps platform using their own identity provider. Used by 20% of our clients.</li>
-                                    <li>Collaborated on a project to redesign our transcription process that reduced transcription cost by 90%</li>
-                                    <li> One of two engineers always on call to fix production issues in real time in every part of the stack.</li>
-                            </ul>
-                            <div class='separator'></div>
-                    </div>
-                    <div class="jobBlock">
-                        <div class='blockHeader'>
-	        <span class='title'>
-	          VoiceOps - Software Engineer
-	        </span>
-                                <span class='date'>2020-02-28 &mdash; 2021-01-31</span>
-                        </div>
-                        <div><a href='https://voiceops.com'>https://voiceops.com</a></div>
-                            <ul class='highlights'>
-                                    <li>Collaborated with the other engineers on:</li>
-                                    <li>The VoiceOps frontend. A platform for call center managers and coaches to view the transcripts of their employees calls, review labels about what happened on each call, and do live coaching via comments in the app.</li>
-                                    <li>A mechanical turk style transcription marketplace that supported 10k+ daily users logging in and performing manual transcription, transcript grading, and transcript tagging tasks</li>
-                                    <li> A data pipeline that transformed raw audio data into transcribed and tagged text</li>
-                                    <li> Multiple customer integrations that imported data from our customers into our data pipeline.</li>
-                            </ul>
-                            <div class='separator'></div>
-                    </div>
-                    <div class="jobBlock">
-                        <div class='blockHeader'>
-	        <span class='title'>
-	          Chatham Financial - Software Developer
-	        </span>
-                                <span class='date'>2017-09-30 &mdash; 2020-01-31</span>
-                        </div>
-                        <div><a href='https://www.chathamfinancial.com'>https://www.chathamfinancial.com</a></div>
-                            <ul class='highlights'>
-                                    <li>The Platform Engineering team maintains and revamps the underlying architecture used by other development teams across Chatham. We work on things like our in-house REST client, our document storage system, general API, etc. C#. - Implemented supplier initiated SAML SSO for flagship website. - Moved system cookie authentication and management from a C# legacy library to a .NET Core microservice that can be used by static web applications. - Helped change our document storage solution from a file system storage system that needed to sync across all offices to a blob storage based system that only syncs between two offices for failover reasons.</li>
-                            </ul>
-                            <div class='separator'></div>
-                    </div>
-                    <div class="jobBlock">
-                        <div class='blockHeader'>
-	        <span class='title'>
-	          Chatham Financial - Software Test Engineer
-	        </span>
-                                <span class='date'>2016-05-31 &mdash; 2017-08-31</span>
-                        </div>
-                        <div><a href='https://www.chathamfinancial.com'>https://www.chathamfinancial.com</a></div>
-                            <ul class='highlights'>
-                                    <li>Helped guide a small team of developers in creating the correct software for complex hedge accounting situations. Learned the hedge accounting system and constantly asked pointed questions to help guide the team’s thinking. Wrote automated acceptance/regression tests in C# and Ruby to confirm the software’s functionality daily.</li>
-                            </ul>
-
-                    </div>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>English</h4>
+              Native Speaker
             </div>
         </div>
-        <div class='sectionLine'></div>
-
-
-        <div id='awards' class="sectionBlock">
-            <div class='sectionName'>
-                <span>AWARDS</span>
-            </div>
-            <div class='sectionContent'>
-                    <div class='blockHeader'>
-        <span class='title'>
-          Gold Medal of Achievement (Eagle Scout), Royal Rangers
-        </span>
-                            <span class='date'>
-          <span class='date'>2013-03-31</span>
-        </span>
-                    </div>
-                        <ul class='highlights'>
-                                <li>Earned the Gold Medal of Achievement in Royal Rangers, a program that mirrors boy scouts in a church setting. The GMA requires all the same merits as the Eagle Scout Award.</li>
-                        </ul>
-
-            </div>
-        </div>
-        <div class='sectionLine'></div>
-
-
-        <div id='education' class="sectionBlock">
-            <div class='sectionName'>
-                <span>EDUCATION</span>
-            </div>
-            <div class='sectionContent'>
-                    <div class='educationBlock'>
-        <span class='title'>
-            Tall Oaks Classical School
-        </span>
-                            <span class='date'>
-          2007-12-31 &mdash; 2012-12-31
-        </span>
-                        <div class=''>
-                            High School  - High School
-                        </div>
-                    </div>
-
-            </div>
-        </div>
-        <div class='sectionLine'></div>
-
-        <div id='skills' class="sectionBlock">
-            <div class='sectionName'>
-                <span>SKILLS</span>
-            </div>
-            <div class='sectionContent'>
-                    <div class='skillBlock'>
-                        <span class='title'>Ruby:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>Python (Programming Language):</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>React:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>C#:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>Chatham Financial:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>SQL:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>TypeORM:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>Public Speaking:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>PostgreSQL:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>Problem Solving:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>Linux:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>JavaScript:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>HTML5:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>Express.js:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>Flask:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>Node.js:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>SpecFlow:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>Angular2:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>CSS3:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>.NET Core:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>Ruby on Rails:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>Git:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>TypeScript:</span>
-                    </div>
-                    <div class='skillBlock'>
-                        <span class='title'>R:</span>
-                    </div>
-            </div>
-        </div>
-        <div class='sectionLine'></div>
-
-        <div id='languages' class="sectionBlock">
-            <div class='sectionName'>
-                <span>LANGUAGES</span>
-            </div>
-            <div class='sectionContent'>
-                    <span class='language'>English</span>
-                        <span class='fluency'><em>(Native Speaker)</em></span>
-                    
-            </div>
-            <div class='sectionLine'></div>
-        </div>
-
-
-</body>
+      </section>
+  </body>
 </html>
