@@ -49,8 +49,8 @@
       "position": "Software Developer",
       "startDate": "2017-09-30",
       "endDate": "2020-01-31",
-      "highlights": [],
-      "summary": "The Platform Engineering team maintains and revamps the underlying architecture used by other development teams across Chatham. We work on things like our in-house REST client, our document storage system, general API, etc. C#. - Implemented supplier initiated SAML SSO for flagship website. - Moved system cookie authentication and management from a C# legacy library to a .NET Core microservice that can be used by static web applications. - Helped change our document storage solution from a file system storage system that needed to sync across all offices to a blob storage based system that only syncs between two offices for failover reasons.",
+      "highlights": ["Implemented supplier initiated SAML SSO for flagship website. Used internally and by multiple clients.", "Moved the cookie authentication and management from a C# legacy library to a .NET Core microservice that can be used by static web applications. Supported 10k+ requests/s.", "Collaborated on changing our document storage solution from a file system storage system that needed to sync across all offices to a blob storage based system that only syncs between two offices for failover reasons. Used to store all internal documents and documents uploaded to our web offering by clients.", "C#, .NET, .NET Core, Javascript, Typescript, React, Angular, Ruby, Sinatra, MongoDB, SQL, SQL Server."],
+      "summary": "The Platform Engineering team maintains and revamps the underlying architecture used by other development teams across Chatham. We work on things like our in-house REST client, our document storage system, general API, etc.",
       "url": "https://www.chathamfinancial.com",
       "location": "Kennett Square, Pennsylvania"
     },
@@ -59,8 +59,8 @@
       "position": "Software Test Engineer",
       "startDate": "2016-05-31",
       "endDate": "2017-08-31",
-      "highlights": [],
-      "summary": "Helped guide a small team of developers in creating the correct software for complex hedge accounting situations. Learned the hedge accounting system and constantly asked pointed questions to help guide the team’s thinking. Wrote automated acceptance/regression tests in C# and Ruby to confirm the software’s functionality daily.",
+      "highlights": ["Collaboratively lead a project to create an internal test dashboard that aggregated every software team's test results into a single platform. The platform allowed users to view their test results including screenshots of failed UI tests and re-run the tests, no matter the test runner, directly from the platform.", "Wrote automated acceptance/regression tests in C# and Ruby to confirm the software’s functionality daily."],
+      "summary": "Helped guide a small team of developers in creating the correct software for complex hedge accounting situations. Learned the hedge accounting system and constantly asked pointed questions to help guide the team’s thinking.",
       "url": "https://www.chathamfinancial.com",
       "location": "Greater Philadelphia Area"
     }
