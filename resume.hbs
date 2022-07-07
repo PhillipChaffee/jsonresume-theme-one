@@ -254,6 +254,36 @@
         <div class='sectionLine'></div>
     {{/if}}
 
+    {{#if resume.certificates.length}}
+        <div id='workBlock' class="sectionBlock">
+            <div class='sectionName'>
+                <span>CERTIFICATES</span>
+            </div>
+            <div class='sectionContent'>
+                {{#each resume.certificates}}
+                    <div class="jobBlock">
+                        <div class='blockHeader'>
+	        <span class='title'>
+	          {{#if name}}{{name}}{{/if}}{{#if awarder}} - {{awarder}}{{/if}}
+	        </span>
+                            {{#if startDate}}
+                                <span class='date'>{{#if startDate}}{{startDate}}{{/if}} &mdash; {{#if
+                                        endDate}}{{endDate}}{{else}}Present{{/if}}</span>
+                            {{/if}}
+                        </div>
+                        <div><a href='{{url}}'>{{url}}</a></div>
+                        {{#if issuer}}
+                            <span>{{issuer}}</span>
+                        {{/if}}
+                        {{#unless @last}}
+                            <div class='separator'></div>{{/unless}}
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class='sectionLine'></div>
+    {{/if}}
+
     {{#if resume.education.length}}
         <div id='education' class="sectionBlock">
             <div class='sectionName'>
