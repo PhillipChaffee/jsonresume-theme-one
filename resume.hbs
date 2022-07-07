@@ -87,12 +87,7 @@
                         </div>
                         <div><a href='{{url}}'>{{url}}</a></div>
                         {{#if summary}}
-                            <div id='summaryBlock' class="sectionBlock">
-                                <div class='sectionContent'>
-                                    <span>{{summary}}</span>
-                                </div>
-                            </div>
-                            <div class='sectionLine'></div>
+                            <span>{{summary}}</span>
                         {{/if}}
                         {{#if highlights.length}}
                             <ul class='highlights'>
@@ -132,6 +127,9 @@
                             <a href='{{url}}'>{{url}}</a>
                         </div>
                     {{/if}}
+                    {{#if summary}}
+                        <span>{{summary}}</span>
+                    {{/if}}
                     {{#if highlights.length}}
                         <ul class='highlights'>
                             {{#each highlights}}
@@ -164,6 +162,9 @@
         </span>
                         {{/if}}
                     </div>
+                    {{#if summary}}
+                        <span>{{summary}}</span>
+                    {{/if}}
                     {{#if highlights.length}}
                         <ul class='highlights'>
                             {{#each highlights}}
@@ -196,6 +197,9 @@
                         {{/if}}
                         {{#if url}}
                             <div class='website'><a href='{{url}}'>{{url}}</a></div>
+                        {{/if}}
+                        {{#if summary}}
+                            <span>{{summary}}</span>
                         {{/if}}
                         {{#if highlights.length}}
                             <ul class='highlights'>
