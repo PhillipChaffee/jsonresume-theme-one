@@ -73,6 +73,12 @@
   ],
   "certificates": [
     {
+      "name": "Triplebyte Certified Generalist Engineer",
+      "issuer": "Triplebyte",
+      "startDate": "2020-08-31",
+      "url": "https://triplebyte.com/tb/phillip-chaffee-dogyk15/certificate/track/generalist"
+    },
+    {
       "name": "The Data Scientist’s Toolbox",
       "issuer": "Coursera Verified Certificates",
       "startDate": "2015-05-31",
@@ -119,12 +125,6 @@
       "issuer": "Coursera Course Certificates",
       "startDate": "2016-01-31",
       "url": "https://www.coursera.org/account/accomplishments/verify/YDF54MNNQ9"
-    },
-    {
-      "name": "Triplebyte Certified Generalist Engineer",
-      "issuer": "Triplebyte",
-      "startDate": "2020-08-31",
-      "url": "https://triplebyte.com/tb/phillip-chaffee-dogyk15/certificate/track/generalist"
     }
   ],
   "publications": [],
