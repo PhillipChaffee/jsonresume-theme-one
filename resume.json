@@ -62,17 +62,7 @@
     }
   ],
   "volunteer": [],
-  "education": [
-    {
-      "institution": "Tall Oaks Classical School",
-      "area": "High School",
-      "studyType": "High School",
-      "startDate": "2007-12-31",
-      "endDate": "2012-12-31",
-      "score": "8th - 12th",
-      "courses": []
-    }
-  ],
+  "education": [],
   "awards": [
     {
       "title": "Gold Medal of Achievement (Eagle Scout)",
