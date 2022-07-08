@@ -257,8 +257,15 @@
     {
       "name": "The Elements of Computing Systems - Building a Modern Computer from First Principles",
       "startDate": "2015-12-31",
-      "summary": "Building a virtual 16-bit Von-Neumann computer from N-And logic gates.\nNand 2 Tetris\nCourse by Noam Nisan and Shimon Schocken.\nhttp://www.nand2tetris.org/",
+      "description": "Built a virtual 16-bit Von-Neumann computer from N-And logic gates.",
+      "highlights": ["<a href=\"http://www.nand2tetris.org\">Nand 2 Tetris</a> - Course by Noam Nisan and Shimon Schocken."],
       "url": "https://github.com/PhillipChaffee/n2t"
+    },
+    {
+      "name": "AssemblyAI Node SDK",
+      "startDate": "2022-05-24",
+      "description": "Unofficial AssemblyAI Node SDK",
+      "url": "https://www.npmjs.com/package/assemblyai-v2-node-sdk"
     }
   ],
   "meta": {
