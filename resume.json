@@ -29,8 +29,9 @@
       "name": "VoiceOps",
       "position": "Senior Software Engineer",
       "startDate": "2021-02-28",
-      "highlights": ["Implemented SAML SSO allowing our customers to authenticate to the VoiceOps platform using their own identity provider. Used by 20% of our clients.", "Collaborated on a project to redesign our transcription process that reduced transcription cost by 90%", " One of two engineers always on call to fix production issues in real time in every part of the stack.", "Ruby, Rails, Typescript, Javascript, React, Node.js, Hapi, AWS, SQL, PostgreSQL, HashiCorp, Python, Flask."],
-      "summary": "Lead daily engineering stand-up, sprint planning, and sprint retrospective. Collaborated with the other senior engineers on new software architecture including a call audio integration API, a microservice that aligns text and audio, and an overhaul of our transcription UI.",
+      "tech": ["Rails", "React", "Node.js", "Python", "AWS", "PostgreSQL"],
+      "highlights": ["Implemented SAML SSO allowing our customers to authenticate to the VoiceOps platform using their own identity provider. Used by 20% of our clients.", "Collaborated on a project to redesign our transcription process that reduced transcription cost by 90%, bringing our cost per audio minute from $.20 to $.02.", "Fulfilled on call duties in real time, resolving 5+ production issues each month.", "Wrote a <a href='https://www.npmjs.com/package/assemblyai-v2-node-sdk'>Typescript SDK</a> for the AssemblyAI API."],
+      "summary": "Lead daily engineering stand-up, bi-weekly sprint planning, and sprint retrospective. Collaborated with the other senior engineers on new software architecture including a call audio integration API, a microservice that aligns text and audio, and an overhaul of our transcription UI.",
       "location": "San Francisco Bay Area"
     },
     {
@@ -38,16 +39,18 @@
       "position": "Software Engineer",
       "startDate": "2020-02-28",
       "endDate": "2021-01-31",
-      "highlights": ["The VoiceOps frontend. A platform for call center managers and coaches to view the transcripts of their employees calls, review labels about what happened on each call, and do live coaching via comments in the app.", "A mechanical turk style transcription marketplace that supported 10k+ daily users logging in and performing manual transcription, transcript grading, and transcript tagging tasks", " A data pipeline that transformed raw audio data into transcribed and tagged text", " Multiple customer integrations that imported data from our customers into our data pipeline.", "Ruby, Rails, Typescript, Javascript, React, AWS, SQL, PostgreSQL, HashiCorp, Python, Flask."],
+      "tech": ["Rails", "React", "Python", "AWS", "PostgreSQL"],
+      "highlights": ["The VoiceOps frontend. A platform for call center managers and coaches to view the transcripts of their employees calls, review labels about what happened on each call, and do live coaching via comments in the app.", "A mechanical turk style transcription marketplace that supported 10k+ daily users logging in and performing manual transcription, transcript grading, and transcript tagging tasks.", " A data pipeline that transformed raw audio data into transcribed and tagged text.", " Multiple customer integrations that imported data from our customers into our data pipeline."],
       "summary": "Collaborated with the other engineers on:",
       "location": "San Francisco Bay Area"
     },
     {
       "name": "Chatham Financial",
-      "position": "Software Developer",
+      "position": "Software Engineer",
       "startDate": "2017-09-30",
       "endDate": "2020-01-31",
-      "highlights": ["Implemented supplier initiated SAML SSO for flagship website. Used internally and by multiple clients.", "Moved the cookie authentication and management from a C# legacy library to a .NET Core microservice that could be used by static web applications. Supported 10k+ requests/sec.", "Collaborated on changing our document storage solution from a file system storage system that needed to sync across all offices to a blob storage system that only synced between two offices for failover reasons. Used to store all internal documents and documents uploaded to our web offering by clients.", "C#, .NET, .NET Core, Javascript, Typescript, React, Angular, Ruby, Sinatra, MongoDB, SQL, SQL Server."],
+      "tech": [".NET", "Angular", "React", "Python", "SQLServer"],
+      "highlights": ["Implemented supplier initiated SAML SSO for flagship website. Used internally and by multiple clients.", "Moved the cookie authentication and management from a C# legacy library to a .NET Core microservice that could be used by static web applications. Supported 10k+ requests/sec.", "Collaborated on changing our document storage solution from a file system storage system that needed to sync across all offices to a blob storage system that only synced between two offices for failover reasons. Used to store all internal documents and documents uploaded to our web offering by clients."],
       "summary": "The Platform Engineering team maintains and revamps the underlying architecture used by other development teams across Chatham. We work on things like our in-house REST API template, our document storage system, permissions API, etc.",
       "location": "Kennett Square, Pennsylvania"
     },
@@ -56,7 +59,8 @@
       "position": "Software Test Engineer",
       "startDate": "2016-05-31",
       "endDate": "2017-08-31",
-      "highlights": ["Collaboratively lead a project to create an internal test dashboard that aggregated every software team's test results into a single platform. The platform allowed users to view their test results including screenshots of failed UI tests and re-run the tests, no matter the test runner, directly from the platform.", "Wrote automated acceptance/regression tests in C# and Ruby to confirm the software’s functionality daily.", "Ruby, C#, Specflow, Rspec, Selenium, Angular, MongoDB, Sinatra."],
+      "tech": ["Ruby", "C#", "SpecFlow", "RSpec", "Selenium", "Angular", "MongoDB"],
+      "highlights": ["Collaboratively lead a project to create an internal test dashboard that aggregated every software team's test results into a single platform. The platform allowed users to view their test results including screenshots of failed UI tests and re-run the tests, no matter the test runner, directly from the platform.", "Wrote automated acceptance/regression tests in C# and Ruby to confirm the software’s functionality daily."],
       "summary": "Helped guide a small team of developers in creating the correct software for complex hedge accounting situations. Learned the hedge accounting system and constantly asked pointed questions to help guide the team’s thinking.",
       "location": "Greater Philadelphia Area"
     }
@@ -77,177 +81,24 @@
       "issuer": "Triplebyte",
       "startDate": "2020-08-31",
       "url": "https://triplebyte.com/tb/phillip-chaffee-dogyk15/certificate/track/generalist"
-    },
-    {
-      "name": "The Data Scientist’s Toolbox",
-      "issuer": "Coursera Verified Certificates",
-      "startDate": "2015-05-31",
-      "url": "https://www.coursera.org/account/accomplishments/verify/BYUY669PYU"
-    },
-    {
-      "name": "R Programming",
-      "issuer": "Coursera Verified Certificates",
-      "startDate": "2015-05-31",
-      "url": "https://www.coursera.org/account/accomplishments/verify/E2JRRGXPVH"
-    },
-    {
-      "name": "Getting and Cleaning Data",
-      "issuer": "Coursera Verified Certificates",
-      "startDate": "2015-06-30",
-      "url": "https://www.coursera.org/account/accomplishments/verify/9M8W9RGM6X"
-    },
-    {
-      "name": "Exploratory Data Analysis",
-      "issuer": "Coursera Verified Certificates",
-      "startDate": "2015-06-30",
-      "url": "https://www.coursera.org/account/accomplishments/verify/JTWSNY733P"
-    },
-    {
-      "name": "Reproducible Research",
-      "issuer": "Coursera Verified Certificates",
-      "startDate": "2015-08-31",
-      "url": "https://www.coursera.org/account/accomplishments/verify/V5UW6L5XZ3"
-    },
-    {
-      "name": "Statistical Inference",
-      "issuer": "Coursera Verified Certificates",
-      "startDate": "2015-08-31",
-      "url": "https://www.coursera.org/account/accomplishments/verify/26C4LPUXYB"
-    },
-    {
-      "name": "Regression Models",
-      "issuer": "Coursera Verified Certificates",
-      "startDate": "2015-11-30",
-      "url": "https://www.coursera.org/account/accomplishments/verify/8MSH83KUFU"
-    },
-    {
-      "name": "Practical Machine Learning",
-      "issuer": "Coursera Course Certificates",
-      "startDate": "2016-01-31",
-      "url": "https://www.coursera.org/account/accomplishments/verify/YDF54MNNQ9"
     }
   ],
   "publications": [],
   "skills": [
     {
-      "name": "Ruby",
-      "level": "",
-      "keywords": []
+      "name": "Backend",
+      "level": "Senior",
+      "keywords": ["Ruby", "Node.js/Typescript", "C#", "Python", "SQL", "Redis"]
     },
     {
-      "name": "Python (Programming Language)",
-      "level": "",
-      "keywords": []
+      "name": "Frontend",
+      "level": "Senior",
+      "keywords": ["React", "Angular"]
     },
     {
-      "name": "React",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "C#",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Chatham Financial",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "SQL",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "TypeORM",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Public Speaking",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "PostgreSQL",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Problem Solving",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Linux",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "JavaScript",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "HTML5",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Express.js",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Flask",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Node.js",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "SpecFlow",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Angular2",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "CSS3",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": ".NET Core",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Ruby on Rails",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Git",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "TypeScript",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "R",
-      "level": "",
-      "keywords": []
+      "name": "Tools",
+      "level": "Senior",
+      "keywords": ["Git", "Linux"]
     }
   ],
   "languages": [],
@@ -260,17 +111,10 @@
       "description": "Built a virtual 16-bit Von-Neumann computer from N-And logic gates.",
       "highlights": ["<a href=\"http://www.nand2tetris.org\">Nand 2 Tetris</a> - Course by Noam Nisan and Shimon Schocken."],
       "url": "https://github.com/PhillipChaffee/n2t"
-    },
-    {
-      "name": "AssemblyAI Node SDK",
-      "startDate": "2022-05-24",
-      "description": "Unofficial AssemblyAI Node SDK",
-      "url": "https://www.npmjs.com/package/assemblyai-v2-node-sdk"
     }
   ],
   "meta": {
     "version": "v1.0.0",
-    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
-    "theme": "onepage"
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
   }
 }

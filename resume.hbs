@@ -68,6 +68,33 @@
         <div class='sectionLine'></div>
     {{/if}}
 
+    {{#if resume.skills.length}}
+        <div id='skills' class="sectionBlock">
+            <div class='sectionName'>
+                <span>SKILLS</span>
+            </div>
+            <div class='sectionContent'>
+                {{#each resume.skills}}
+                    <div class='skillBlock'>
+                        <span class='title'>{{#if name}}{{name}}{{/if}}{{#if level}} <em>({{level}})</em>{{/if}}:</span>
+                        {{#if keywords.length}}
+                            {{#each keywords}}
+                                <span>{{.}}</span>{{#unless @last}}, {{/unless}}
+                            {{/each}}
+                        {{/if}}
+                        {{#if details.length}}
+                            {{#each details}}
+                                <span>{{#if text}}{{text}}{{/if}}{{#if comment}} <em>({{comment}})</em>{{/if}}{{#unless
+                                        @last}}, {{/unless}}</span>
+                            {{/each}}
+                        {{/if}}
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class='sectionLine'></div>
+    {{/if}}
+
     {{#if resume.work.length}}
         <div id='workBlock' class="sectionBlock">
             <div class='sectionName'>
@@ -78,16 +105,24 @@
                     <div class="jobBlock">
                         <div class='blockHeader'>
 	        <span class='title'>
-	          {{#if name}}{{name}}{{/if}}{{#if position}} - {{position}}{{/if}}
-	        </span>
+                {{#if position}}{{position}}{{/if}}
+            </span>
+                            <span class='name'>
+                                {{#if name}} - {{name}}{{/if}}
+                            </span>
                             {{#if startDate}}
                                 <span class='date'>{{#if startDate}}{{startDate}}{{/if}} &mdash; {{#if
                                         endDate}}{{endDate}}{{else}}Present{{/if}}</span>
                             {{/if}}
                         </div>
+                        <div>{{#if tech.length}}
+                            {{#each tech}}
+                                {{.}}{{#unless @last}}, {{/unless}}
+                            {{/each}}
+                        {{/if}}</div>
                         <div><a href='{{url}}'>{{url}}</a></div>
                         {{#if summary}}
-                            <span>{{summary}}</span>
+                            <div class='summary'>{{summary}}</div>
                         {{/if}}
                         {{#if highlights.length}}
                             <ul class='highlights'>
@@ -97,7 +132,8 @@
                             </ul>
                         {{/if}}
                         {{#unless @last}}
-                            <div class='separator'></div>{{/unless}}
+                            <div class='sectionLine'></div>
+                        {{/unless}}
                     </div>
                 {{/each}}
             </div>
@@ -115,14 +151,15 @@
                     <div class="jobBlock">
                         <div class='blockHeader'>
 	        <span class='title'>
-	          {{#if name}}{{name}}{{/if}}
-	        </span>
+                {{#if name}}
+                    <div><a href='{{url}}'>{{name}}</a></div>
+                {{/if}}
+            </span>
                             {{#if startDate}}
                                 <span class='date'>{{#if startDate}}{{startDate}}{{/if}} &mdash; {{#if
                                         endDate}}{{endDate}}{{else}}Present{{/if}}</span>
                             {{/if}}
                         </div>
-                        <div><a href='{{url}}'>{{url}}</a></div>
                         {{#if description}}
                             <span>{{description}}</span>
                         {{/if}}
@@ -134,7 +171,8 @@
                             </ul>
                         {{/if}}
                         {{#unless @last}}
-                            <div class='separator'></div>{{/unless}}
+                            <div class='sectionLine'></div>
+                        {{/unless}}
                     </div>
                 {{/each}}
             </div>
@@ -175,42 +213,8 @@
                         </ul>
                     {{/if}}
                     {{#unless @last}}
-                        <div class='separator'></div>{{/unless}}
-                {{/each}}
-            </div>
-        </div>
-        <div class='sectionLine'></div>
-    {{/if}}
-
-    {{#if resume.awards.length}}
-        <div id='awards' class="sectionBlock">
-            <div class='sectionName'>
-                <span>AWARDS</span>
-            </div>
-            <div class='sectionContent'>
-                {{#each resume.awards}}
-                    <div class='blockHeader'>
-        <span class='title'>
-          {{#if title}}{{title}}{{/if}}{{#if awarder}}, {{awarder}}{{/if}}
-        </span>
-                        {{#if date}}
-                            <span class='date'>
-          <span class='date'>{{date}}</span>
-        </span>
-                        {{/if}}
-                    </div>
-                    {{#if summary}}
-                        <span>{{summary}}</span>
-                    {{/if}}
-                    {{#if highlights.length}}
-                        <ul class='highlights'>
-                            {{#each highlights}}
-                                <li>{{.}}</li>
-                            {{/each}}
-                        </ul>
-                    {{/if}}
-                    {{#unless @last}}
-                        <div class='separator'></div>{{/unless}}
+                        <div class='sectionLine'></div>
+                    {{/unless}}
                 {{/each}}
             </div>
         </div>
@@ -247,7 +251,8 @@
                         {{/if}}
                     </div>
                     {{#unless @last}}
-                        <div class='separator'></div>{{/unless}}
+                        <div class='sectionLine'></div>
+                    {{/unless}}
                 {{/each}}
             </div>
         </div>
@@ -264,20 +269,56 @@
                     <div class="jobBlock">
                         <div class='blockHeader'>
 	        <span class='title'>
-	          {{#if name}}{{name}}{{/if}}{{#if awarder}} - {{awarder}}{{/if}}
+	          {{#if name}}<a href='{{url}}'>{{name}}</a>{{/if}}{{#if awarder}} - {{awarder}}{{/if}}
 	        </span>
                             {{#if startDate}}
                                 <span class='date'>{{#if startDate}}{{startDate}}{{/if}} &mdash; {{#if
                                         endDate}}{{endDate}}{{else}}Present{{/if}}</span>
                             {{/if}}
                         </div>
-                        <div><a href='{{url}}'>{{url}}</a></div>
                         {{#if issuer}}
                             <span>{{issuer}}</span>
                         {{/if}}
                         {{#unless @last}}
-                            <div class='separator'></div>{{/unless}}
+                            <div class='sectionLine'></div>
+                        {{/unless}}
                     </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class='sectionLine'></div>
+    {{/if}}
+
+    {{#if resume.awards.length}}
+        <div id='awards' class="sectionBlock">
+            <div class='sectionName'>
+                <span>AWARDS</span>
+            </div>
+            <div class='sectionContent'>
+                {{#each resume.awards}}
+                    <div class='blockHeader'>
+        <span class='title'>
+          {{#if title}}{{title}}{{/if}}{{#if awarder}}, {{awarder}}{{/if}}
+        </span>
+                        {{#if date}}
+                            <span class='date'>
+          <span class='date'>{{date}}</span>
+        </span>
+                        {{/if}}
+                    </div>
+                    {{#if summary}}
+                        <span>{{summary}}</span>
+                    {{/if}}
+                    {{#if highlights.length}}
+                        <ul class='highlights'>
+                            {{#each highlights}}
+                                <li>{{.}}</li>
+                            {{/each}}
+                        </ul>
+                    {{/if}}
+                    {{#unless @last}}
+                        <div class='sectionLine'></div>
+                    {{/unless}}
                 {{/each}}
             </div>
         </div>
@@ -317,34 +358,8 @@
                         {{/if}}
                     </div>
                     {{#unless @last}}
-                        <div class='separator'></div>{{/unless}}
-                {{/each}}
-            </div>
-        </div>
-        <div class='sectionLine'></div>
-    {{/if}}
-
-    {{#if resume.skills.length}}
-        <div id='skills' class="sectionBlock">
-            <div class='sectionName'>
-                <span>SKILLS</span>
-            </div>
-            <div class='sectionContent'>
-                {{#each resume.skills}}
-                    <div class='skillBlock'>
-                        <span class='title'>{{#if name}}{{name}}{{/if}}{{#if level}} <em>({{level}})</em>{{/if}}:</span>
-                        {{#if keywords.length}}
-                            {{#each keywords}}
-                                <span>{{.}}</span>{{#unless @last}}, {{/unless}}
-                            {{/each}}
-                        {{/if}}
-                        {{#if details.length}}
-                            {{#each details}}
-                                <span>{{#if text}}{{text}}{{/if}}{{#if comment}} <em>({{comment}})</em>{{/if}}{{#unless
-                                        @last}}, {{/unless}}</span>
-                            {{/each}}
-                        {{/if}}
-                    </div>
+                        <div class='sectionLine'></div>
+                    {{/unless}}
                 {{/each}}
             </div>
         </div>
@@ -392,5 +407,6 @@
         </div>
     {{/if}}
 
+</div>
 </body>
 </html>
