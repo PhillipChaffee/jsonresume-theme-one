@@ -1,5 +1,5 @@
-import fs from "fs";
-import Handlebars from "handlebars";
+const fs = require("fs");
+const Handlebars = require("handlebars");
 
 const COURSES_COLUMNS = 3;
 
