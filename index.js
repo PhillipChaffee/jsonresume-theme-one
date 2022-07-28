@@ -11,11 +11,11 @@ const PREPEND_SUMMARY_CATEGORIES = [
     "projects"
 ];
 
-function validateArray(arr) {
+const validateArray = (arr) => {
     return arr !== undefined && arr !== null && arr instanceof Array && arr.length > 0;
 }
 
-function render(resume) {
+const render = (resume) => {
     // Split courses into 3 columns
     if (validateArray(resume.education)) {
         resume.education.forEach((block) => {
