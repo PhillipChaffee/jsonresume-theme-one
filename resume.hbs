@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{resume.basics.name}}</title>
         <style>{{{css}}}</style>
     </head>
@@ -18,33 +18,30 @@
                 <span class="label">{{label}}</span>
                 {{/if}}
             </div>
-            <div id="basicsBlock" class="smallFont">
-                <div class="contactBlock">
-                    {{#if email}}
-                    <span class="email">{{email}}</span>
-                    {{/if}}
-                    {{#if phone}}
-                    <span class="divider">|</span>
-                    <span class="phone">{{phone}}</span>
-                    {{/if}}
-                    {{#location}}
-                    <span class="divider">|</span>
-                    <span class="address">
-                        {{#if city}}{{city}}{{/if}}{{#if region}}, {{region}}{{/if}}{{#if countryCode}}, {{countryCode}}{{/if}}
-                    </span>
-                    {{/location}}
-                </div>
+            <div id="basicsBlock">
+                {{#if email}}
+                <span class="email">{{email}}</span>
+                {{/if}}
+                {{#if phone}}
+                <span class="divider">|</span>
+                <span class="phone">{{phone}}</span>
+                {{/if}}
+                {{#location}}
+                <span class="divider">|</span>
+                <span class="address">
+                    {{#if city}}{{city}}{{/if}}{{#if region}}, {{region}}{{/if}}{{#if countryCode}}
+                    , {{countryCode}}{{/if}}
+                </span>
+                {{/location}}
                 {{#if profiles.length}}
-                <div id="profilesBlock">
-                    {{#each profiles}}
-                    {{#if url}}
-                    <span class="url">
-                        <a href="{{url}}">{{network}}</a>
-                    </span>
-                    {{#unless @last}}<span class="divider">|</span>{{/unless}}
-                    {{/if}}
-                    {{/each}}
-                </div>
+                {{#each profiles}}
+                {{#if url}}
+                <span class="divider">|</span>
+                <span class="url">
+                    <a href="{{url}}">{{network}}</a>
+                </span>
+                {{/if}}
+                {{/each}}
                 {{/if}}
             </div>
             <div class="sectionLine"></div>
@@ -100,6 +97,9 @@
                 <div class="sectionContent">
                     {{#each resume.work}}
                     <div class="jobBlock">
+                        {{#unless @first}}
+                        <div class="sectionLine"></div>
+                        {{/unless}}
                         <div class="blockHeader">
                             <span class="title">
                                 {{#if position}}{{position}}{{/if}}
@@ -130,9 +130,6 @@
                             {{/each}}
                         </ul>
                         {{/if}}
-                        {{#unless @last}}
-                        <div class="sectionLine"></div>
-                        {{/unless}}
                     </div>
                     {{/each}}
                 </div>
@@ -406,7 +403,6 @@
                 <div class="sectionLine"></div>
             </div>
             {{/if}}
-
         </div>
     </body>
 </html>

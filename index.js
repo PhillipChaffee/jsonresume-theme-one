@@ -56,6 +56,11 @@ const render = (resume) => {
     });
 }
 
+const pdfRenderOptions = {
+    mediaType: 'print'
+};
+
 module.exports = {
+    pdfRenderOptions,
     render
 };
