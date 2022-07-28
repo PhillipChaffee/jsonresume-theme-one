@@ -86,18 +86,15 @@
   "skills": [
     {
       "name": "Backend",
-      "level": "Senior",
-      "keywords": ["Ruby", "Node.js/Typescript", "C#", "Python", "SQL", "Redis"]
+      "keywords": ["Ruby", "Node.js/Typescript", "C#", "Python", "SQL", "Redis", "NoSQL"]
     },
     {
       "name": "Frontend",
-      "level": "Senior",
       "keywords": ["React", "Angular"]
     },
     {
       "name": "Tools",
-      "level": "Senior",
-      "keywords": ["Git", "Linux"]
+      "keywords": ["Git", "Linux", "AWS", "HashiCorp"]
     }
   ],
   "languages": [],
