@@ -1,12 +1,8 @@
 {
-  "name": "jsonresume-theme-onepage",
-  "version": "0.0.3",
-  "description": "Compact, printable theme for JSON Resume",
-  "author": "Ainsley Chong",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ainsleychong/jsonresume-theme-onepage.git"
-  },
+  "name": "phillipchaffee-resume",
+  "version": "0.0.1",
+  "description": "Phillip's resume.",
+  "author": "Phillip Chaffee",
   "license": "MIT",
   "main": "index.js",
   "prettier": "@vercel/style-guide/prettier",
