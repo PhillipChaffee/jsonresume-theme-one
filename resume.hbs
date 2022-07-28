@@ -156,8 +156,7 @@
                 {{/if}}
             </span>
                             {{#if startDate}}
-                                <span class='date'>{{#if startDate}}{{startDate}}{{/if}} &mdash; {{#if
-                                        endDate}}{{endDate}}{{else}}Present{{/if}}</span>
+                                <span class='date'>{{startDate}}</span>
                             {{/if}}
                         </div>
                         {{#if description}}
@@ -272,8 +271,7 @@
 	          {{#if name}}<a href='{{url}}'>{{name}}</a>{{/if}}{{#if awarder}} - {{awarder}}{{/if}}
 	        </span>
                             {{#if startDate}}
-                                <span class='date'>{{#if startDate}}{{startDate}}{{/if}} &mdash; {{#if
-                                        endDate}}{{endDate}}{{else}}Present{{/if}}</span>
+                                <span class='date'>{{startDate}}</span>
                             {{/if}}
                         </div>
                         {{#if issuer}}
@@ -300,11 +298,7 @@
         <span class='title'>
           {{#if title}}{{title}}{{/if}}{{#if awarder}}, {{awarder}}{{/if}}
         </span>
-                        {{#if date}}
-                            <span class='date'>
-          <span class='date'>{{date}}</span>
-        </span>
-                        {{/if}}
+                        {{#if date}}<span class='date'>{{date}}</span>{{/if}}
                     </div>
                     {{#if summary}}
                         <span>{{summary}}</span>
