@@ -105,7 +105,6 @@
       "name": "Nand 2 Tetris",
       "startDate": "2015",
       "description": "Built a virtual 16-bit Von-Neumann computer from N-And logic gates.",
-      "highlights": ["<a href=\"http://www.nand2tetris.org\">Nand 2 Tetris</a> - Course by Noam Nisan and Shimon Schocken."],
       "url": "https://github.com/PhillipChaffee/n2t"
     }
   ],
