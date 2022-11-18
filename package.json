@@ -1,8 +1,10 @@
 {
-  "name": "jsonresume-theme-phillipchaffee",
+  "name": "jsonresume-theme-one",
   "version": "0.0.1",
-  "description": "Phillip's resume.",
+  "description": "Updated version of the onepage theme.",
   "author": "Phillip Chaffee",
+  "repository": "https://github.com/PhillipChaffee/jsonresume-theme-one",
+  "bugs": "https://github.com/PhillipChaffee/jsonresume-theme-one/issues",
   "license": "MIT",
   "main": "index.js",
   "prettier": "@vercel/style-guide/prettier",

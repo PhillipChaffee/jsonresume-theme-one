@@ -1,4 +1,6 @@
-# jsonresume-theme-onepage
+# jsonresume-theme-one
+
+There were some things that seemed super broken with this theme, but I liked it a lot. So I fixed it up a bit.
 
 A compact theme for JSON Resume, designed for printing. 
 
@@ -6,30 +8,14 @@ Tries to fit as much information as possible onto a single page without making s
 
 ## Example
 
-http://themes.jsonresume.org/theme/onepage
+http://themes.jsonresume.org/theme/one
 
 ## Running
 
 ```
 sudo npm install -g resume-cli
-git clone https://github.com/ainsleyc/jsonresume-theme-onepage.git
-cd jsonresume-theme-onepage
+git clone https://github.com/phillipchaffee/jsonresume-theme-one.git
+cd jsonresume-theme-one
 resume serve
 ```
 You can print directly from the served html.
-
-## Options
-
-For the "experience" and "skills" sections, you can optionally replace the "highlights" list with a "details" list with this format:
-
-```
-"details": [
-  { "text": "Javascript", "comment": "expert" },
-  { "text": "Coffeescript", "comment": "expert" },
-  { "text": "Ruby", "comment": "competent" },
-  { "text": "Java", "comment": "novice" }
-]
-```
-
-See included resume.json for more details.
-
